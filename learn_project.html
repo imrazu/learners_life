@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title>change color</title>
+    <style type="text/css" media="all">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Sans+Narrow&family=Poppins:wght@200;700&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: #414141;
+        color: #f5f5f5;
+        font-family: poppins;
+    }
+    header{
+        width: 200px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    header span{
+        background: #fff;
+        overflow: hidden;
+        color:#393447;
+        border-radius:2px;
+        display: block;
+        flex-grow: 1;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        animation: header 3s;
+    }
+    header>h1{
+        text-align: center;
+        display: block;
+        background: #393447;
+        border-radius: 2px;
+        overflow: hidden;
+        flex-grow: 1;
+        z-index: 10;
+        padding: 0px 4px;
+    }
+    @keyframes header{
+        
+        0%{
+            transform: translateX(-90px);
+        }
+        50%{
+            
+            transform: translateX(20px);
+        }
+        100%{
+            
+            transform: translateX(0px);
+        }
+        
+    }
+    section{
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        
+    }
+    /* box style*/
+    #box{
+        width: 50vw;
+        height: 100%;
+        clip-path: polygon(79% 0, 0 50%, 79% 100%);
+        margin-left: 10%;
+        position: absolute;
+        transition: all 0.1s;
+        transform: translateX(180%);
+    }
+    /*first div hover effct*/
+    .one:hover{
+        transform: translateX(-20%)!important;
+    }
+    .one{
+        left:0%;
+        background: #46ef14;
+        
+    }
+        /*second div hover effct*/
+    .two:hover{
+        transform: translateX(-40%)!important;
+    }
+    .two{
+        left:10%;
+        background: #356499;
+    }
+        /*thard div hover effct*/
+    .three:hover{
+        transform: translateX(-60%)!important;
+    }
+    .three{
+        left:20%;
+        background: #2fa6c4;
+    }
+        /*fourth div hover effct*/
+    .four:hover{
+        transform: translateX(-80%)!important;
+    }
+    .four{
+        left:30%;
+        background: #969696;
+    }
+        /*fifth div hover effct*/
+    .five:hover{
+        transform: translateX(-100%)!important;
+    }
+    .five{
+        left:40%;
+        background: #144753;
+    }
+    #btn{
+        display: block;
+        padding: 5% 10%;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        outline: none;
+        border: 0.15em solid #fff;
+        border-radius: 4px;
+        background: transparent;
+        font-weight: bold;
+        font-family: poppins;
+        font-size: 1em;
+        color: #fff;
+        
+        
+    }
+    
+    
+    </style>
+</head>
+<body>
+<header>
+    <h1>im </h1>
+    <span>razu</span>
+</header>
+    
+    
+<section>
+    <div id="box" class="one"></div>
+    <div id="box" class="two"></div>
+    <div id="box" class="three"></div>
+    <div id="box" class="four"></div>
+    <div id="box" class="five"></div>
+</section>
+<button id="btn" type="button">CLICK ME</button>
+<script type="text/javascript" charset="utf-8">
+    const box=document.getElementById('box');
+    const btn=document.getElementById('btn');
+    const one =document.querySelector('.one')
+    const two =document.querySelector('.two')
+    const three =document.querySelector('.three')
+    const four =document.querySelector('.four')
+    const five =document.querySelector('.five')
+    
+    
+    
+    btn.addEventListener('click',function(){
+        
+        one.setAttribute('style','transform:translateX(0%);transition:all .5s;');
+        two.setAttribute('style','transform:translateX(0%);transition:all 0.90s;');
+        three.setAttribute('style','transform:translateX(0%);transition:all 1.70s;');
+        four.setAttribute('style','transform:translateX(0%);transition:all 2s;');
+        five.setAttribute('style','transform:translateX(0%);transition:all 2.3s;');
+    },);
+    five.setAttribute('style','transition:all 0.5s;')
+    
+    
+</script>
+</body>
+</html>
